@@ -6,6 +6,7 @@
     { "src": "index.html", "use": "@now/static" }
   ],
   "env": {
+    "MY_NAME": "Volcy, Clervens",
     "MY_EMAIL": "@email"
   }
 }
