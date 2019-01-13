@@ -1,0 +1,8 @@
+{
+  "name": "zeit-my-app",
+  "version": 2,
+  "builds": [
+    { "src": "date.js", "use": "@now/node" },
+    { "src": "index.html", "use": "@now/static" }
+  ]
+}
