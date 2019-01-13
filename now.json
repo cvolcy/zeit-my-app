@@ -4,5 +4,8 @@
   "builds": [
     { "src": "date.js", "use": "@now/node" },
     { "src": "index.html", "use": "@now/static" }
-  ]
+  ],
+  "env": {
+    "MY_EMAIL": "@email"
+  }
 }
