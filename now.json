@@ -1,5 +1,6 @@
 {
   "name": "zeit-my-app",
+  "alias": "zeit-my-app",
   "version": 2,
   "builds": [
     { "src": "date.js", "use": "@now/node" },
