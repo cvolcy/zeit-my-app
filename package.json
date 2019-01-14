@@ -1,0 +1,23 @@
+{
+  "name": "zeit-my-app",
+  "version": "1.0.0",
+  "description": "Simple application to test Zeit features.",
+  "main": "date.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvolcy/zeit-my-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvolcy/zeit-my-app/issues"
+  },
+  "homepage": "https://github.com/cvolcy/zeit-my-app#readme",
+  "dependencies": {
+    "mongoose": "^5.4.4"
+  }
+}
