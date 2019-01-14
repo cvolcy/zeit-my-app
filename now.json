@@ -4,7 +4,9 @@
   "version": 2,
   "builds": [
     { "src": "date.js", "use": "@now/node" },
-    { "src": "index.html", "use": "@now/static" }
+    { "src": "index.html", "use": "@now/static" },
+    { "src": "assets/w3.css", "use": "@now/static" },
+    { "src": "assets/images/avatar.png", "use": "@now/static" }
   ],
   "env": {
     "MY_NAME": "Volcy, Clervens",
