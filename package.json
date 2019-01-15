@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cvolcy/zeit-my-app#readme",
   "dependencies": {
+    "graphql": "^14.0.2",
     "mongoose": "^5.4.4"
   }
 }
