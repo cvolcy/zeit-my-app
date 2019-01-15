@@ -60,7 +60,21 @@
                     </svg>
                     Date|JS
                 </h2>
-                <p class="w3-padding-large">...</p>
+                <p class="w3-padding-large">
+                    A simple lambda in nodejs that return the informations about the current date and time of the server.
+                </p>
+                <p class="w3-padding-large">Example : <pre><code>
+    const data = {
+        timestamp: Unix epoch timestamp in milliseconds,
+        date: The current date in text,
+        time: The current time in text
+              formatted as (hh:mm:ss GMT+0000 (UTC),
+        timezoneOffset: The timezone offset of the server's timezone,
+        name: My name,
+        email: My email
+    };
+                        </code></pre>
+                </p>
             </div>
         </div>
         <div class="w3-half w3-deep-orange w3-container" style="height:700px">
@@ -72,7 +86,25 @@
                     </svg>
                     Videos|JS
                 </h2>
-                <p class="w3-padding-large">...</p>
+                <p class="w3-padding-large">
+                    A lambda function in nodejs using mongoose the fetch data about the available videos in the database.
+                </p>
+                <p class="w3-padding-large">Example : <pre><code>
+    {
+        "videos": [
+            {
+                "_id": "5ba152f9fb6fc072da048559",
+                "title": "The 7 Steps of Machine Learning (AI Adventures)",
+                "description": "A description for my video.",
+                "url": "https://www.youtube.com/embed/nKW8Ndu7Mjw"
+            },
+            { ... },
+            ...
+        ],
+        "count": 123
+    }
+                </code></pre>
+                </p>
             </div>
         </div>
     </div>
