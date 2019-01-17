@@ -32,6 +32,13 @@
                     </svg>
                     Videos
                 </a>
+                <a href='/graphql.js?query={videos(lang:"fr"){title url}}' class="w3-button w3-black w3-block w3-hover-pink w3-padding-16">
+                    <svg height="20" viewBox="0 0 15 20" fill="none" style="vertical-align: middle;">
+                        <path d="M3.5 14.435h1.816l1.99-4.622h.13l1.217 3.267c.404 1.084.901 1.42 2.047 1.42.317 0 .591-.032.8-.097v-1.246c-.115.02-.238.045-.346.045-.519 0-.771-.174-.995-.736l-2.133-5.39C7.212 5.016 6.55 4.5 5.114 4.5c-.28 0-.49.032-.742.09v1.246c.195-.025.288-.038.404-.038.872 0 1.124.206 1.628 1.4l.238.582L3.5 14.435z" fill="#fff"></path>
+                        <rect x="0.5" y="0.5" width="14" height="18" rx="2.5" stroke="#fff"></rect>
+                    </svg>
+                    GraphQL
+                </a>
             </div>
         </div>
         <div class="w3-half w3-blue-grey w3-container" style="height:700px">
@@ -108,7 +115,51 @@
             </div>
         </div>
     </div>
-
+    <!-- Third Grid: GraphQL & NULL -->
+    <div class="w3-row">
+        <div class="w3-half w3-pink w3-container" style="height:700px">
+            <div class="w3-padding-64">
+                <h2 class="w3-center">
+                    <svg height="30" viewBox="0 0 15 20" fill="none" style="vertical-align: sub;">
+                        <path d="M3.5 14.435h1.816l1.99-4.622h.13l1.217 3.267c.404 1.084.901 1.42 2.047 1.42.317 0 .591-.032.8-.097v-1.246c-.115.02-.238.045-.346.045-.519 0-.771-.174-.995-.736l-2.133-5.39C7.212 5.016 6.55 4.5 5.114 4.5c-.28 0-.49.032-.742.09v1.246c.195-.025.288-.038.404-.038.872 0 1.124.206 1.628 1.4l.238.582L3.5 14.435z"
+                            fill="#fff"></path>
+                        <rect x="0.5" y="0.5" width="14" height="18" rx="2.5" stroke="#fff"></rect>
+                    </svg>
+                    GraphQL|JS
+                </h2>
+                <p class="w3-padding-large">
+                    A lambda in nodejs that acts as a GraphQL server connected to a MongoDB database. <br>
+                    It serve two models (Videos and Books).
+                </p>
+                <p class="w3-padding-large">Example : <pre><code>
+    {
+        videos(lang:"en") {
+            title url
+        }
+    }
+    // Output
+    {
+        "videos": [
+            {
+                "title": "The 7 Steps of Machine Learning (AI Adventures)",
+                "url": "https://www.youtube.com/embed/nKW8Ndu7Mjw"
+            },
+            { ... },
+            ...
+        ]
+    }
+                </code></pre>
+                </p>
+            </div>
+        </div>
+        <div class="w3-half w3-black w3-container" style="height:700px">
+            <div class="w3-padding-64">
+                <h2 class="w3-center"></h2>
+                <p class="w3-padding-large"></p>
+                <p class="w3-padding-large"></p>
+            </div>
+        </div>
+    </div>
     <!-- Footer -->
     <footer class="w3-container w3-black w3-padding-16" style="position: fixed; max-width: 1300px; width: 100%; bottom: 0;">
         <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>

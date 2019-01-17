@@ -19,7 +19,7 @@ module.exports = {
         if (input['description']) updates[`${lang}.description`] = input.description;
         if (input['url']) updates[`${lang}.url`] = input.url;
 
-        return (await Videos.findOneAndUpdate({ _id }, { $set: updates}))
+        return (await Videos.findOneAndUpdate({ _id }, { $set: updates}, {new: true}))
                     .localize(lang);
     },
     books: async ({ lang }) => {
