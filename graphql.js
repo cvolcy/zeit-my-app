@@ -6,7 +6,10 @@ const root = require("./src/graphql/root.js");
 
 module.exports = (req, res) => {
     const { query } = parse(req.url, true);
-    graphql(schema, query['query'], root, null, query['variables']).then((response) => {
+    let variables = JSON.parse(query['variables'] || '{}');
+    graphql(schema, query['query'], root, null, variables).then((response) => {
+        console.log(response.errors);
+        console.log(response.data);
         res.setHeader('Content-Type', 'application/json');
         res.end(JSON.stringify({ data: response.data}, null, 3));
     }).catch((error) => {
