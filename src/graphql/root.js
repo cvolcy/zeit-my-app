@@ -11,6 +11,17 @@ module.exports = {
     videos: async ({ lang }) => {
         return (await Videos.find()).map((video) => video.localize(lang));
     },
+    updateVideo: async ({ lang, input }) => {
+        const _id = input._id;
+        let updates = {};
+
+        if (input['title']) updates[`${lang}.title`] = input.title;
+        if (input['description']) updates[`${lang}.description`] = input.description;
+        if (input['url']) updates[`${lang}.url`] = input.url;
+
+        return (await Videos.findOneAndUpdate({ _id }, { $set: updates}))
+                    .localize(lang);
+    },
     books: async ({ lang }) => {
         return (await Books.find()).map((book) => book.localize(lang));
     }
