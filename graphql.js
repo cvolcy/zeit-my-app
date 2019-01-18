@@ -1,7 +1,7 @@
 const { parse } = require('url');
-const { graphql, buildSchema } = require("graphql");
+const { graphql } = require("graphql");
 
-const schema = buildSchema(require("./src/graphql/schema.js"));
+const schema = require("./src/graphql/schema.js");
 const root = require("./src/graphql/root.js");
 
 module.exports = (req, res) => {
