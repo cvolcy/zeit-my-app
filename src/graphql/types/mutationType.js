@@ -1,4 +1,5 @@
 const { GraphQLObjectType, GraphQLString, GraphQLNonNull } = require("graphql");
+const mongoose = require('mongoose');
 // GraphQL Types
 const VideoType = require("./videoType");
 const VideoInputType = require("../inputs/videoInput");
