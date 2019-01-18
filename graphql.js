@@ -7,14 +7,14 @@ mongoose.connection
 require('./src/graphql/models/models.js');
 const schema = require("./src/graphql/schema.js");
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
     const { query } = parse(req.url, true);
     let variables = query['variables'] ? JSON.parse(query['variables']) : null;
-    graphql(schema, query['query'], null, null, variables).then((response) => {
-        console.log(response.errors);
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({ data: response.data}, null, 3));
-    }).catch((error) => {
-        console.log(error);
-    });
+
+    let response = await graphql(schema, query['query'], null, null, variables);
+    
+    console.log(response.errors);
+    
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ data: response.data}, null, 3));
 };
