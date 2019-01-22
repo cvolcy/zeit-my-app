@@ -11,7 +11,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type','text/plain')
         self.end_headers()
 
-        params = dict(parse.parse_qsl(self.path[2:]))
+        params = dict(parse.parse_qsl(self.path.split('?')[-1]))
 
         default_message = 'Hello World, This is Zeit-My-App.\nYou can update this message by setting\nthe query string parameter \'message\'.'
 
@@ -19,7 +19,7 @@ class handler(BaseHTTPRequestHandler):
         self.wfile.write(message.encode())
         return
 
-# For debugging purpose only
+# # For debugging purpose only
 # try:
 #     from http.server import HTTPServer
 #     PORT_NUMBER = 3002
