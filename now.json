@@ -7,7 +7,8 @@
     { "src": "videos.js", "use": "@now/node" },
     { "src": "graphql.js", "use": "@now/node" },
     { "src": "index.html", "use": "@now/static" },
-    { "src": "assets/images/avatar.png", "use": "@now/static" }
+    { "src": "assets/images/avatar.png", "use": "@now/static" },
+    { "src": "cowsay.py", "use": "@now/python" }
   ],
   "env": {
     "MY_NAME": "Volcy, Clervens",
