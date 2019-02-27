@@ -207,6 +207,32 @@
         <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </footer>
 
+    <!-- The Modal -->
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top">
+    
+            <header class="w3-container w3-khaki">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span>
+                <h2>Warning</h2>
+            </header>
+    
+            <div class="w3-container">
+                <p>The project "Zeit | My App" has been deprecated.</p>
+                <p>Future developments will be made on an Azure function project @ <a target="_blank" href="https://fast-everglades.azurewebsites.net">Fast Everglades</a>.</p>
+            </div>
+    
+            <footer class="w3-container w3-khaki">
+                <p></p>
+            </footer>
+    
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('id01').style.display='block';
+        });
+    </script>
 </body>
 
 </html>
